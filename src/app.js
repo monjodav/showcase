@@ -7,7 +7,7 @@ const portfolioProjects = [
     longDescription: '<h4 class="story-subtitle">The Catalyst</h4><p>It all started with a pivotal moment : a layoff, ironically right after I\'d contributed to a major €80M success. Instead of succumbing to this setback, I chose it as my springboard. A leap of faith took me 10,000km from home : a deliberate dive out of my comfort zone. This journey wasn\'t just about changing scenery; it was about discovering firsthand that with true determination, any obstacle can be reshaped into an opportunity.</p><h4 class="story-subtitle">The Insight</h4><p>This experience solidified a core belief: so many of us are looking for guidance to unlock our true potential and simply feel better. I believe everyone has a hero within them, but not everyone realizes it yet.<br>This realization became the seed for Herochall.</p><h4 class="story-subtitle">My Mission: Your Hero\'s Journey, Gamified</h4><p>Herochall is that spark, designed to help you ignite your inner hero. It\'s a mobile application that transforms personal development into an engaging, gamified adventure. I\'ve cut through the overwhelming theories to focus on what truly matters: practical action! Through a personalized path of progressive challenges and steadfast support, Herochall guides you step-by-step. My aim is to help you take meaningful action, grow confidently, and feel accompanied on your unique journey.<br><br>My ultimate objective?<br>To empower you with the tools and the path to become the hero of your own story.</p>',
     technologies: ["React Native", "JavaScript", "Supabase", "AI (for Coaching)"],
     releaseDate: "Q2 2025", // Added release date for Herochall
-    imageUrl: "public/assets/images/herochall.png",
+    imageUrl: "/assets/images/herochall.png",
     liveUrl: "https://herochall.com",
     repoUrl: "#",
     logoUrl: "https://placehold.co/40x40/000000/FFFFFF?text=H&font=poppins", // Changed to black
@@ -21,7 +21,7 @@ const portfolioProjects = [
     longDescription: '<h4 class="story-subtitle">The Catalyst</h4><p>Athledex was born from a simple, frustrating truth: chasing your athletic goals can feel incredibly lonely. I saw talented athletes, disciplined, driven, passionate, struggling not because they lacked motivation, but because they lacked support. Some couldn\'t find the right people to train with. Others gave up because they didn\'t have the money or visibility to keep going.<br>That\'s what hit me hardest. Potential was being wasted, not from laziness, but from isolation and lack of access.</p><p>And honestly, I felt it myself. I only recently started my own physical journey. I wasn\'t an elite athlete, just someone trying to show up consistently and push myself. But even with all the motivation in the world, doing it alone made progress feel heavy.<br>I realized I would have benefited the most from something like Athledex.</p><p>We don\'t need another tracking app.<br>We need a bridge. A real way to connect athletes to each other and to the opportunities that help them stay in the game.</p><h4 class="story-subtitle">The Insight</h4><p>What clicked was this. No matter your level, sport is better together. It\'s not just about performance. It\'s about belonging, about shared progress, about knowing someone\'s in your corner. Whether you\'re preparing for your first race or chasing your next podium, having the right people around you changes everything.<br>This insight became the foundation for Athledex, a platform where ambition meets connection.</p><h4 class="story-subtitle">My Mission: Connection That Fuels Progress</h4><p>Athledex is built to help athletes grow through meaningful connection. It\'s not about followers or likes. It\'s about finding your rhythm alongside others who get it. Through smart matchmaking, sport-specific filters, and real human stories, Athledex helps you find training partners, stay motivated, and feel part of something bigger.</p><p>This is not just a social network. It is a purpose-driven space where your goals matter and your journey is respected.<br>My mission is simple. Make sure no athlete has to chase their dream alone.</p><p>Because progress is powerful.<br>But shared progress, that is unstoppable.</p>', // Full Athledex description with better line breaks
     technologies: ["- (still developing)"], // Changed to show still developing
     releaseDate: " S2 2025", // Added release date for Athledex
-    imageUrl: "public/assets/images/athledex.jpg", // Updated to use actual logo
+    imageUrl: "/assets/images/athledex.jpg", // Updated to use actual logo
     liveUrl: "#",
     repoUrl: "#",
     logoUrl: "https://placehold.co/40x40/4A90E2/FFFFFF?text=A&font=poppins", // Updated logo with blue color
@@ -111,12 +111,12 @@ function renderPortfolio() {
                             <span class="release-date">${project.releaseDate}</span>
                             <div class="platform-logos">
                                 ${project.id === 'project-1' ? `
-                                    <img src="public/assets/images/apple-logo.png" alt="iOS" class="platform-logo" title="Available on iOS">
-                                    <img src="public/assets/images/android-logo.png" alt="Android" class="platform-logo" title="Available on Android">
+                                    <img src="/assets/images/apple-logo.png" alt="iOS" class="platform-logo" title="Available on iOS">
+                                    <img src="/assets/images/android-logo.png" alt="Android" class="platform-logo" title="Available on Android">
                                 ` : project.id === 'project-2' ? `
-                                    <img src="public/assets/images/web-logo.png" alt="Web" class="platform-logo" title="Web Platform">
-                                    <img src="public/assets/images/apple-logo.png" alt="iOS" class="platform-logo" title="Available on iOS">
-                                    <img src="public/assets/images/android-logo.png" alt="Android" class="platform-logo" title="Available on Android">
+                                    <img src="/assets/images/web-logo.png" alt="Web" class="platform-logo" title="Web Platform">
+                                    <img src="/assets/images/apple-logo.png" alt="iOS" class="platform-logo" title="Available on iOS">
+                                    <img src="/assets/images/android-logo.png" alt="Android" class="platform-logo" title="Available on Android">
                                 ` : ''}
                             </div>
                         </div>
