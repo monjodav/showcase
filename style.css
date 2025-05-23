@@ -234,6 +234,7 @@ section {
     font-weight: 700;
     color: var(--text-light);
 }
+
 .main-nav .logo a:hover {
     opacity: 0.8;
 }
@@ -264,9 +265,23 @@ section {
     font-weight: 600;
     border: 2px solid var(--text-light);
 }
+
 .main-nav .nav-cta:hover {
     background-color: transparent;
     color: var(--text-light);
+}
+
+/* Logo principal */
+.logo-section {
+    margin-bottom: 2rem;
+}
+
+.main-logo {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-light);
+    margin: 0;
+    text-align: center;
 }
 
 .hero-content {
@@ -646,7 +661,7 @@ section {
 }
 
 .project-header {
-    padding: 2rem 2.5rem 1rem 2.5rem;
+    padding: 2rem 1.5rem 2rem 1.5rem; /* Augmente le padding du header sur mobile */
     border-bottom: 1px solid var(--border-color);
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     position: relative;
@@ -655,12 +670,16 @@ section {
 .project-title-section {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
+    gap: 1rem; /* Réduit l'espacement entre logo et titre */
+    position: relative; /* Permet le positionnement du tag */
+    padding-right: 8rem; /* Augmente l'espace réservé pour le bouton Work in Progress sur mobile */
+    padding-top: 1rem; /* Ajoute de l'espace en haut */
+    padding-bottom: 2rem; /* Ajoute plus d'espace en bas */
+    min-height: 4rem; /* Assure une hauteur minimale pour la section */
 }
 
 .project-logo {
-    width: 150px;
+    width: 150px; /* Taille originale pour desktop */
     height: 150px;
     border-radius: 16px;
     object-fit: contain;
@@ -1049,6 +1068,18 @@ section {
     gap: 1rem;
 }
 
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--text-light);
+}
+
 .social-links img {
     width: 20px;
     height: 20px;
@@ -1072,20 +1103,59 @@ section {
         text-align: center;
     }
     .about-image {
-        order: 2;
+        order: 1; /* Image en premier sur mobile */
+        margin-bottom: 2rem; /* Espacement entre l'image et le texte */
+    }
+    .about-image img {
+        width: 60%; /* Réduit la taille de l'image à 60% sur mobile */
+        max-width: 300px; /* Limite la taille maximale */
     }
     .about-text {
-        order: 1;
+        order: 2; /* Texte en second sur mobile */
     }
     .portfolio-layout-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+    .projects-list-column {
+        position: static; /* Désactive le sticky sur mobile */
+        margin-bottom: 2rem; /* Ajoute un espacement sous la liste */
+    }
     .project-display-column {
         position: static;
         height: auto;
         overflow-y: visible;
-        margin-top: 2.5rem;
+        margin-top: 0; /* Supprime le margin-top car la liste est maintenant au-dessus */
+    }
+    .project-logo {
+        width: 60px; /* Réduit encore plus la taille du logo sur mobile */
+        height: 60px;
+    }
+    .project-title-section {
+        gap: 1rem; /* Réduit l'espacement entre logo et titre */
+        position: relative; /* Permet le positionnement du tag */
+        padding-right: 8rem; /* Augmente l'espace réservé pour le bouton Work in Progress sur mobile */
+        padding-top: 1rem; /* Ajoute de l'espace en haut */
+        padding-bottom: 2rem; /* Ajoute plus d'espace en bas */
+        min-height: 4rem; /* Assure une hauteur minimale pour la section */
+    }
+    #project-display-title {
+        font-size: 1.5rem; /* Réduit la taille du titre sur mobile */
+    }
+    .work-in-progress-tag {
+        font-size: 0.55rem !important; /* Réduit encore plus la taille du tag "work in progress" */
+        padding: 0.25rem 0.5rem !important; /* Réduit encore plus le padding */
+        top: 1.5rem; /* Déplace le bouton plus bas pour éviter qu'il soit collé au titre */
+        right: 0.5rem; /* Déplace plus à droite pour créer plus d'espace avec le titre */
+        margin-left: 2rem; /* Augmente l'espace à gauche du bouton */
+    }
+    .project-detail-tag {
+        font-size: 0.7rem; /* Réduit la taille des tags de projet */
+        padding: 0.25rem 0.6rem; /* Réduit le padding */
+    }
+    .project-display-tech span {
+        font-size: 0.75rem; /* Réduit la taille des tags de technologie */
+        padding: 0.25rem 0.6rem; /* Réduit le padding */
     }
     #project-display-image {
         max-height: 350px;
@@ -1104,27 +1174,40 @@ section {
     .main-nav {
         flex-direction: column;
         gap: 1rem;
+        margin-bottom: 1rem;
     }
+    
+    .main-nav .logo {
+        order: 2; /* Logo en bas sur mobile */
+    }
+    
     .main-nav ul {
+        order: 1; /* Navigation en haut sur mobile */
         flex-wrap: wrap;
         justify-content: center;
         gap: 0.5rem 1rem;
     }
+    
     .main-nav ul a {
         font-size: 0.95rem;
     }
+    
     .main-nav .nav-cta {
         padding: 0.5rem 1rem;
+    }
+    
+    .main-nav .logo a {
+        font-size: 2.5rem; /* Plus grand sur mobile quand il est en bas */
     }
 
     .testimonial-grid { grid-template-columns: 1fr; }
 
     .about-social-links {
-        justify-content: center; /* Center links when stacked or in centered text */
-        flex-wrap: wrap; /* Allow wrapping if too many links */
+        justify-content: center;
+        flex-wrap: wrap;
     }
     .about-text .secondary-btn {
-        margin: 0 auto; /* Center the button if text is centered */
+        margin: 0 auto;
     }
 }
 
@@ -1329,4 +1412,65 @@ section {
         white-space: normal;
         margin-left: 0.5rem;
     }
+}
+
+/* Bouton hamburger - caché par défaut sur desktop */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-light);
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+/* Animation du bouton hamburger quand le menu est ouvert */
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+}
+
+/* Menu de navigation - visible par défaut sur desktop */
+.nav-menu {
+    display: block;
+}
+
+/* Overlay pour fermer le menu - caché par défaut */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.nav-overlay.active {
+    display: block;
 }
