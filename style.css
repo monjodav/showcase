@@ -1297,3 +1297,34 @@ section {
         opacity: 0.9;
     }
 }
+
+/* Styles pour l'offre spéciale */
+.cta-with-offer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.special-offer {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.85rem;
+    color: #666;
+    margin-left: 0.5rem;
+    opacity: 0.8;
+    letter-spacing: 0.3px;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .cta-with-offer {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .special-offer {
+        margin-left: 0;
+        font-size: 0.8rem;
+    }
+}

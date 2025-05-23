@@ -124,7 +124,12 @@ function renderPortfolio() {
                     ` : ''}
                     
                     <div class="project-links">
-                        ${project.liveUrl && project.liveUrl !== "#" ? `<a href="${project.liveUrl}" class="cta-btn secondary-btn" target="_blank"><span>I want to become my 2.0</span></a>` : ''}
+                        ${project.liveUrl && project.liveUrl !== "#" ? `
+                            <div class="cta-with-offer">
+                                <a href="${project.liveUrl}" class="cta-btn secondary-btn" target="_blank"><span>I want to become my 2.0</span></a>
+                                ${project.id === 'project-1' ? `<span class="special-offer">1st month of premium on me before it goes live</span>` : ''}
+                            </div>
+                        ` : ''}
                         ${project.repoUrl && project.repoUrl !== "#" ? `<a href="${project.repoUrl}" class="cta-btn secondary-btn" target="_blank"><span>View Repo</span></a>` : ''}
                     </div>
                 </div>
