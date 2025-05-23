@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>monjodav - Project Showcase</title>
+  <link rel="stylesheet" href="public/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Add icon library like Font Awesome if needed later -->
+</head>
+<body>
+
+  <!-- Header & Hero Section -->
+  <header class="hero-section">
+    <nav class="main-nav">
+      <div class="logo">
+        <a href="#">monjodav</a>
+      </div>
+      <ul>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-cta">Contact Me</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>
+        Just a guy building things to make 
+        <div class="words-wrapper">
+          <div class="words">
+            <span>you</span>
+            <span>people</span>
+            <span>the world</span>
+          </div>
+        </div>
+        better
+      </h1>
+      <p class="subtitle">Hey, I'm Jordan — a self-taught solopreneur documenting my journey in creating and experimenting with digital products.</p>
+      <a href="#portfolio" class="cta-btn primary-btn"><span>Discover My Projects</span></a>
+    </div>
+  </header>
+
+
+    <!-- About Me Section -->
+    <section id="about" class="about-me-section">
+      <div class="container">
+        <div class="about-content-grid">
+          <div class="about-image">
+            <img src="./public/assets/images/monjodav-background.JPG" alt="monjodav - Solopreneur">
+          </div>
+          <div class="about-text">
+            <h2>My motto</h2>
+            <p>You know, I didn't grow up with a keyboard in my hands or a degree in tech.<br>I started with ideas, curiosity, and a drive to build things that matter.<br>I'm not a developer. I'm not a designer.</p> 
+            <p>I'm someone who believes that with the right vision and systems, you can create powerful tools that help people grow.</p>
+
+            <p>From Athledex, a platform to help athletes unlock their full potential, to Herochall, a gamified personal development journey that challenges you one step at a time, every project I launch is born from the same desire.<br>I want to help people push beyond their limits and actually enjoy the process of becoming who they want to be.</p>
+
+            <p>My path isn't traditional. I take imperfect action. I test, I learn, and I build.<br>I don't wait for permission or perfect timing. I've learned that momentum beats motivation every time. And the more we create quality (I insist on this word) tools that support that momentum, the more people will surprise themselves with what they're capable of.</p>
+
+            <p>Everything I build is shaped by one belief. People don't need to be fixed. They need to feel supported, challenged, and seen. Whether you're chasing a personal goal, building confidence, or stepping into something new, my work is here to give you the tools to keep going.</p>
+
+            <p>We're in a moment where AI is everywhere. And yes, it's powerful. It can write, code, even create. But it can't feel purpose. It doesn't wrestle with doubt or grow through discomfort. It doesn't dream bigger after failure. Which is good. While the world rushes to automate everything, too many people forget the one thing that should never be outsourced: their own growth.</p>
+
+            <p>AI can enhance you, but it can't replace the work of becoming you. That is still yours to do. And it's the most meaningful project you'll ever take on.</p>
+
+            <p>You don't need more motivation. You need momentum, clarity, and the right tools. That's what I build.</p>
+            
+            <div class="about-social-links">
+              <a href="https://x.com/monjodav" target="_blank" class="cta-btn secondary-btn">
+                <img src="./public/assets/images/x-logo.avif" alt="X (Twitter) Profile" class="x-logo">
+                <span>Follow my journey</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="container">
+        <h2>My Recent Work</h2>
+        <p class="section-subtitle">A selection of projects I've had the pleasure to explore and build. </p>
+        
+        <div id="portfolio-interactive-layout" class="portfolio-layout-grid">
+          <div class="projects-list-column">
+            <ul id="projects-list">
+              <!-- Project list items will be injected here by JavaScript -->
+              <li class="project-list-item-placeholder">Loading projects...</li>
+            </ul>
+          </div>
+          <div class="project-display-column" id="project-details-scroll-container">
+            <!-- Detailed project cards will be injected here by JavaScript -->
+            <!-- Fallback content if JS fails or no projects -->
+            <div class="project-detail-card-placeholder">
+              <p>Project details will appear here. Select a project from the list or scroll to view.</p>
+            </div>
+          </div>
+        </div>
+         <div class="app-card-placeholder" style="display:none;">No projects available or JavaScript is disabled.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content-grid">
+        <div class="footer-about">
+          <h3>monjodav</h3>
+          <p>You don't need more motivation. You need momentum, clarity, and the right tools. That's what I build.</p>
+        </div>
+        <div class="footer-spacer">
+          <!-- Empty column for spacing -->
+        </div>
+        <div class="footer-contact">
+          <h4>Get in Touch</h4>
+          <p><a href="mailto:contact@monjodav.com">contact@monjodav.com</a></p>
+          <!-- Add social media links here if desired -->
+          <div class="social-links">
+            <a href="https://x.com/monjodav" aria-label="X"><img src="./public/assets/images/x-logo.avif" alt="X (Twitter)"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 monjodav. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="src/app.js"></script>
+</body>
+</html>
